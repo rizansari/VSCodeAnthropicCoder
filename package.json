@@ -1,0 +1,118 @@
+{
+  "name": "anthropic-coder",
+  "displayName": "Anthropic Coder",
+  "description": "Code using Anthropic API Key",
+  "version": "0.0.2",
+  "publisher": "RizwanAnsari",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "AI"
+  ],
+  "activationEvents": [
+    "onLanguage:json"
+  ],
+  "main": "./out/extension.js",
+  "files": [
+    "out/**/*",
+    "media/**/*"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Anthropic Coder",
+      "properties": {
+        "anthropic-coder.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Anthropic API Key"
+        },
+        "anthropic-coder.model": {
+          "type": "string",
+          "default": "claude-3-haiku-20240307",
+          "enum": [
+            "claude-3-haiku-20240307",
+            "claude-3-5-sonnet-20240620",
+            "claude-3-opus-20240229"
+          ],
+          "enumDescriptions": [
+            "3 Haiku - Fast",
+            "Sonnet 3.5 - Best",
+            "3 Opus - Expensive"
+          ],
+          "description": "Anthropic Model to use"
+        },
+        "anthropic-coder.maxTokens": {
+          "type": "number",
+          "default": 4096,
+          "enum": [
+            1024,
+            2048,
+            4096,
+            8192
+          ],
+          "enumDescriptions": [
+            "1024 tokens",
+            "2048 tokens",
+            "4096 tokens",
+            "8192 tokens"
+          ],
+          "description": "Maximum number of tokens to generate"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "anthropic-coder.generateCode",
+        "title": "Anthropic Coder: Generate Code with Anthropic API"
+      },
+      {
+        "command": "anthropic-coder.changeModel",
+        "title": "Anthropic Coder: Change Anthropic Model"
+      },
+      {
+        "command": "anthropic-coder.changeMaxTokens",
+        "title": "Anthropic Coder: Change Max Tokens"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "anthropic-code-generator",
+          "title": "Anthropic",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "anthropic-code-generator": [
+        {
+          "type": "webview",
+          "id": "anthropicCodeGenerator",
+          "name": "Code Generator"
+        }
+      ]
+    },
+    "Keybindings": []
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.92.0",
+    "@types/node": "^14.x.x",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.13.0",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.27.1",
+    "marked": "^4.0.12"
+  }
+}
