@@ -2,8 +2,14 @@
   "name": "anthropic-coder",
   "displayName": "Anthropic Coder",
   "description": "Code using Anthropic API Key",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "RizwanAnsari",
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rizansari/VSCodeAnthropicCoder.git"
+  },
   "engines": {
     "vscode": "^1.92.0"
   },
