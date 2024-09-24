@@ -8,8 +8,6 @@ The Anthropic Code Generator is a Visual Studio Code extension that allows you t
 - **Code Generation**: Generate code for a variety of programming languages, including Python, JavaScript, Java, and more. Customize the generated code with prompts and templates.
 - **Boilerplate Generation**: Create boilerplate code for common project structures, such as web applications, APIs, or machine learning projects.
 - **Algorithm Generation**: Describe the problem you're trying to solve, and the extension will generate the necessary code to implement the solution.
-- **Inline Suggestions**: Get real-time code suggestions and completions as you type, powered by the Anthropic API.
-- **Project Structure Generation**: Automatically generate the file and folder structure for your projects, saving you time and effort.
 
 ## Installation
 
@@ -42,7 +40,7 @@ The Anthropic Code Generator currently supports the following programming langua
 
 ## Feedback and Contributions
 
-We welcome feedback and contributions from the community. If you encounter any issues or have suggestions for improvements, please create a new issue on the [GitHub repository](https://github.com/your-username/anthropic-code-generator).
+We welcome feedback and contributions from the community. If you encounter any issues or have suggestions for improvements, please create a new issue on the [GitHub repository](https://github.com/rizansari/VSCodeAnthropicCoder.git).
 
 If you'd like to contribute to the development of the Anthropic Code Generator, feel free to submit a pull request with your changes.
 

@@ -2,7 +2,7 @@
   "name": "anthropic-coder",
   "displayName": "Anthropic Coder",
   "description": "Code using Anthropic API Key",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "publisher": "RizwanAnsari",
   "license": "MIT",
   "icon": "media/icon.png",
